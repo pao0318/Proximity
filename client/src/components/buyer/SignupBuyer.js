@@ -5,12 +5,34 @@ const SignupBuyer = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    password: '',
     phoneNumber: '',
     location: ''
   });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async(e) => {
+    e.preventDefault();
+    const response = await fetch("http://localhost:8080/api/signupbuyer/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: formData.email,
+        name: formData.name,
+        password: formData.password,
+        phoneNumber: formData.phoneNumber,
+        location: formData.location
+      }),
+    });
+    const json = await response.json();
+    if (json.success) {
+      console.log(formData,'suckssex');
+    }
   };
 
   const handleLocationFetch = () => {
@@ -29,11 +51,7 @@ const SignupBuyer = () => {
     }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // You can add form submission logic here
-    console.log(formData);
-  };
+
 
   return (
     <Card>
@@ -60,6 +78,16 @@ const SignupBuyer = () => {
             fullWidth
             type="email"
             value={formData.email}
+            onChange={handleChange}
+            margin="normal"
+          />
+          <TextField
+            name="password"
+            label="Password"
+            variant="outlined"
+            fullWidth
+            type="password"
+            value={formData.password}
             onChange={handleChange}
             margin="normal"
           />
