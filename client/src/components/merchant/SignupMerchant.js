@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
-export const Signup = (props) => {
+const SignupMerchant = (props) => {
   let navigate = useNavigate();
   const [image, setImage] = useState("");
 
@@ -350,3 +350,5 @@ export const Signup = (props) => {
     </div>
   );
 };
+
+export default SignupMerchant;

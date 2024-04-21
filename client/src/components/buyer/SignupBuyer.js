@@ -82,11 +82,7 @@ const SignupBuyer = () => {
             onChange={handleChange}
             margin="normal"
           />
-          <Box mt={2} display="flex" justifyContent="center">
-            <Button type="submit" variant="contained" color="primary">
-              Sign Up
-            </Button>
-            <Button
+          <Button
               variant="outlined"
               color="secondary"
               style={{ marginLeft: '10px' }}
@@ -94,6 +90,11 @@ const SignupBuyer = () => {
             >
               Get Location
             </Button>
+          <Box mt={2} display="flex" justifyContent="center">
+            <Button type="submit" variant="contained" color="primary">
+              Sign Up
+            </Button>
+            
           </Box>
         </form>
       </CardContent>
