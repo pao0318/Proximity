@@ -7,7 +7,7 @@ import Alert from "./components/Alert";
 import { Signup } from "./components/doctor/Signup";
 import { useState } from "react";
 import SignupHome from "./components/SignupHome";
-import { SignupPatient } from "./components/patient/SignupPatient";
+import SignupBuyer from "./components/patient/SignupBuyer";
 import { Notfound } from "./components/Notfound";
 
 function App() {
@@ -32,8 +32,8 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home showAlert={showAlert} />} />
             <Route exact path="/signuphome" element={<SignupHome showAlert={showAlert} />} />
-            <Route exact path="/signup" element={<Signup showAlert={showAlert} />} />
-            <Route exact path="/signuppatient" element={<SignupPatient showAlert={showAlert} />} />
+            <Route exact path="/signupmerchant" element={<Signup showAlert={showAlert} />} />
+            <Route exact path="/signupbuyer" element={<SignupBuyer showAlert={showAlert} />} />
             <Route path="*" element={<Notfound />} />
           </Routes>
         </div>

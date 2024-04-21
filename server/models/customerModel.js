@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import { Schema } from "mongoose";
-const customerSchema = mongoose.Schema(
+
+const buyerSchema = mongoose.Schema(
     {
         name: {
             type: String,
@@ -10,9 +11,13 @@ const customerSchema = mongoose.Schema(
             type: String,
             required: true,
         },
-        location: {
+        email : {
             type: String,
             required: true,
+        },
+        location: {
+            type: String,
+            required: false,
         },
         zipCode: {
             type: String,
@@ -32,4 +37,4 @@ const customerSchema = mongoose.Schema(
     }
 )
 
-export const customer =mongoose.Model('customerSchema',{name: String})
+export const buyer =mongoose.Model('buyerSchema',{name: String})
