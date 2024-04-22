@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import { Card, CardHeader, CardContent, TextField, Button, Box } from '@mui/material';
 
 const SignupBuyer = () => {
+  let navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -30,8 +32,11 @@ const SignupBuyer = () => {
       }),
     });
     const json = await response.json();
+    console.log('json', json)
     if (json.success) {
-      console.log(formData,'suckssex');
+      console.log('HUIHUIHUI',json);
+      localStorage.setItem("email", json.savedBuyer.email);
+      navigate("/signupmerchant");
     }
   };
 

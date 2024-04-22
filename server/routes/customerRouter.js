@@ -4,6 +4,7 @@ import Buyer from '../models/customerModel.js';
 const router = express.Router();
 
 router.post('/', async(req, res) => {
+    let success=false;
   try {
     const { name, email, password, phoneNumber, location } = req.body;
     const newBuyer = new Buyer({
@@ -14,11 +15,12 @@ router.post('/', async(req, res) => {
         location
     });
     const savedBuyer = await newBuyer.save();
-    console.log(savedBuyer); 
-    return res.status(201).json({ message: 'Buyer signed up successfully in', savedBuyer });
+    success =true;
+    return res.status(201).json({success, savedBuyer});
 } catch (error) {
     console.error('Error saving buyer:', error);
-    return res.status(500).json({ error: 'Internal server error' });
+    success = false;
+    return res.status(500).json({ success, error: 'Internal server error' });
 }
 });
 
