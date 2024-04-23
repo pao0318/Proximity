@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Card, CardHeader, CardContent, TextField, Button, Box } from '@mui/material';
 
 const SignupBuyer = () => {
@@ -18,7 +18,7 @@ const SignupBuyer = () => {
 
   const handleSubmit = async(e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:8080/api/signupbuyer/", {
+    const response = await fetch("http://localhost:8080/api/auth/signupbuyer/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -32,11 +32,10 @@ const SignupBuyer = () => {
       }),
     });
     const json = await response.json();
-    console.log('json', json)
+    console.log('formdata', formData)
     if (json.success) {
-      console.log('HUIHUIHUI',json);
       localStorage.setItem("email", json.savedBuyer.email);
-      navigate("/signupmerchant");
+      navigate("/login");
     }
   };
 
@@ -130,6 +129,17 @@ const SignupBuyer = () => {
             
           </Box>
         </form>
+        <div className="d-flex align-items-center justify-content-center pb-4">
+                <p className="mb-0 me-2">Already have an account?</p>
+                <Link
+                  type="button"
+                  className="btn btn-outline-danger"
+                  to="/login"
+                  role="button"
+                >
+                  Login
+                </Link>
+              </div>
       </CardContent>
     </Card>
   );

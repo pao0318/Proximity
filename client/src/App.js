@@ -3,11 +3,11 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Alert from "./components/Alert";
-import SignupHome from "./components/SignupHome";
 import { useState } from "react";
-import SignupMerchant from "./components/merchant/SignupMerchant";
 import SignupBuyer from "./components/buyer/SignupBuyer";
 import { Notfound } from "./components/Notfound";
+import HomePage from "./components/HomePage/HomePage.js";
+import Login from "./components/Login/Login";
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -29,9 +29,9 @@ function App() {
         <Alert alert={alert} />
         <div>
           <Routes>
-            <Route exact path="/signuphome" element={<SignupHome showAlert={showAlert} />} />
-            <Route exact path="/signupmerchant" element={<SignupMerchant showAlert={showAlert} />} />
+            <Route exact path="/" element={<HomePage />} />
             <Route exact path="/signupbuyer" element={<SignupBuyer showAlert={showAlert} />} />
+            <Route exact path="/login" element={<Login />} />
             <Route path="*" element={<Notfound />} />
           </Routes>
         </div>

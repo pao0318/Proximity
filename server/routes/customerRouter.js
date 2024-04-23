@@ -1,9 +1,10 @@
 import express from "express";
 import Buyer from '../models/customerModel.js';
 
-const router = express.Router();
+let router = express.Router();
 
-router.post('/', async(req, res) => {
+//Signup
+router.post('/signupbuyer', async(req, res) => {
     let success=false;
   try {
     const { name, email, password, phoneNumber, location } = req.body;
@@ -22,6 +23,14 @@ router.post('/', async(req, res) => {
     success = false;
     return res.status(500).json({ success, error: 'Internal server error' });
 }
+});
+
+//Route2: login: authenticate
+router.post("/login",async (req, res) => {
+      let success= false;
+      const { email, password } = req.body;
+      console.log(req.body);
+      return res.status(200).json({success, message: "logged in"});
 });
 
 export default router;
