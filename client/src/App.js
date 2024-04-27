@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Alert from "./components/Alert";
 import SignupHome from "./components/SignupHome";
+import { HomePage } from "./components/HomePage";
 import { useState } from "react";
 import SignupMerchant from "./components/merchant/SignupMerchant";
 import SignupBuyer from "./components/buyer/SignupBuyer";
@@ -29,6 +30,7 @@ function App() {
         <Alert alert={alert} />
         <div>
           <Routes>
+            <Route exact path="/" element={<HomePage showAlert={showAlert} />} />
             <Route exact path="/signuphome" element={<SignupHome showAlert={showAlert} />} />
             <Route exact path="/signupmerchant" element={<SignupMerchant showAlert={showAlert} />} />
             <Route exact path="/signupbuyer" element={<SignupBuyer showAlert={showAlert} />} />

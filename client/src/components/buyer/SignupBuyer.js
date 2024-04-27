@@ -36,7 +36,7 @@ const SignupBuyer = () => {
     if (json.success) {
       console.log('HUIHUIHUI',json);
       localStorage.setItem("email", json.savedBuyer.email);
-      navigate("/signupmerchant");
+      navigate("/signup");
     }
   };
 

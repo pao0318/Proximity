@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import "./SignupHome.css";
+import React  from 'react';
 
 export default function SignupHome() {
   return (
+    <>
     <div>
       <div className="container" style={{ margin: "50px" }}>
         <div className="body d-md-flex align-items-center justify-content-between">
@@ -51,5 +53,6 @@ export default function SignupHome() {
         </div>
       </div>
     </div>
+    </>
   );
 }
