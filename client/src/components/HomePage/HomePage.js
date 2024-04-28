@@ -1,14 +1,14 @@
 import React from "react";
 import "./HomePage.css";
 
-export const HomePage = () => {
+const HomePage = () => {
   return (
     <>
       <section id="hero" className="d-flex align-items-center">
         <div className="container">
-          <h1>Welcome to Exelligence</h1>
-          <h2>Say Hello to India's top doctors via "Project Exelligence"</h2>
-          <a href="/login" className="btn-get-started scrollto">
+          <h1>Welcome to Proximity</h1>
+          <h2>Say Hello to India's greatest shopping experience "Project Proxies"</h2>
+          <a href="/signupbuyer" className="btn-get-started scrollto">
             Get Started
           </a>
         </div>
@@ -91,11 +91,11 @@ export const HomePage = () => {
                         </p>
                       </div>
                       <div className="col-lg-4 text-center order-1 order-lg-2">
-                        <img
+                        {/* <img
                           src="/img/departments-1.jpg"
                           alt=""
                           className="img-fluid"
-                        />
+                        /> */}
                       </div>
                     </div>
                   </div>
@@ -116,11 +116,11 @@ export const HomePage = () => {
                         </p>
                       </div>
                       <div className="col-lg-4 text-center order-1 order-lg-2">
-                        <img
+                        {/* <img
                           src="/img/departments-2.jpg"
                           alt=""
                           className="img-fluid"
-                        />
+                        /> */}
                       </div>
                     </div>
                   </div>
@@ -145,11 +145,11 @@ export const HomePage = () => {
                         </p>
                       </div>
                       <div className="col-lg-4 text-center order-1 order-lg-2">
-                        <img
+                        {/* <img
                           src="/img/departments-3.jpg"
                           alt=""
                           className="img-fluid"
-                        />
+                        /> */}
                       </div>
                     </div>
                   </div>
@@ -173,11 +173,11 @@ export const HomePage = () => {
                         </p>
                       </div>
                       <div className="col-lg-4 text-center order-1 order-lg-2">
-                        <img
+                        {/* <img
                           src="/img/departments-4.jpg"
                           alt=""
                           className="img-fluid"
-                        />
+                        /> */}
                       </div>
                     </div>
                   </div>
@@ -200,11 +200,11 @@ export const HomePage = () => {
                         </p>
                       </div>
                       <div className="col-lg-4 text-center order-1 order-lg-2">
-                        <img
+                        {/* <img
                           src="/img/departments-5.jpg"
                           alt=""
                           className="img-fluid"
-                        />
+                        /> */}
                       </div>
                     </div>
                   </div>
@@ -217,7 +217,7 @@ export const HomePage = () => {
         <section id="team" className="team section-bg">
           <div className="container" data-aos="fade-up">
             <div className="section-title">
-              <h2>Team Nutella</h2>
+              <h2>Team Proxies</h2>
             </div>
 
             <div className="row">
@@ -228,14 +228,14 @@ export const HomePage = () => {
                   data-aos-delay="100"
                 >
                   <div className="pic">
-                    <img
+                    {/* <img
                       src="/img/team/team-1.jpeg"
                       className="img-fluid"
                       alt=""
-                    />
+                    /> */}
                   </div>
                   <div className="member-info">
-                    <h4>Parwin Akhtari </h4>
+                    <h4>Karan Agrawal</h4>
                   </div>
                 </div>
               </div>
@@ -259,25 +259,6 @@ export const HomePage = () => {
                 </div>
               </div>
 
-              <div className="col-lg-3 mt-4 mt-lg-0 justify-content-center">
-                <div
-                  className="member justify-content-center"
-                  data-aos="zoom-in"
-                  data-aos-delay="100"
-                >
-                  <div className="pic">
-                    <img
-                      src="/img/team/team-3.jpeg"
-                      className="img-fluid"
-                      alt=""
-                    />
-                  </div>
-                  <div className="member-info">
-                    <h4>Alpana Nanda</h4>
-                  </div>
-                </div>
-                
-              </div>
               <div className="col-lg-3 mt-4 mt-lg-0">
                 <div
                   className="member align-items-start"
@@ -285,14 +266,14 @@ export const HomePage = () => {
                   data-aos-delay="100"
                 >
                   <div className="pic">
-                    <img
+                    {/* <img
                       src="/img/team/team-4.jpeg"
                       className="img-fluid"
                       alt=""
-                    />
+                    /> */}
                   </div>
                   <div className="member-info">
-                    <h4>Akshay Agrawal</h4>
+                    <h4>Umang Pandey</h4>
                   </div>
                 </div>
                 
@@ -304,3 +285,6 @@ export const HomePage = () => {
     </>
   );
 };
+
+
+export default HomePage;

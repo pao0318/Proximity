@@ -147,7 +147,7 @@ body {
   #hero {
     width: 100%;
     height: 90vh;
-    /* background: url("../../public/img/hero-bg.jpg") */
+    /* background: url("../../../public/img/hero-bg.jpg") top center; */
     background-size: cover;
     margin-bottom: -200px;
   }
@@ -427,7 +427,7 @@ body {
     font-size: 14px;
   }
   .about .video-box {
-    /* background: url("../../public/img/hero-bg.jpg") center center no-repeat; */
+    /* background: url("../../../public/img/about.jpg") center center no-repeat; */
     background-size: cover;
     min-height: 500px;
   }

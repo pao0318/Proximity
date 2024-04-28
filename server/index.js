@@ -10,8 +10,9 @@ app.use(express.json());
 app.use(cors());
 
 // Mount the review router for the "/api/reviews" route
-app.use('/api/signupbuyer', signUpBuyerRouter);
+app.use('/api/auth', signUpBuyerRouter);
 
+// 
 // Root route
 app.get('/', (request, response) => {
     return response.status(234).send('Huihuihui');

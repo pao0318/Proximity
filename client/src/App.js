@@ -3,12 +3,12 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Alert from "./components/Alert";
-import SignupHome from "./components/SignupHome";
-import { HomePage } from "./components/HomePage";
 import { useState } from "react";
-import SignupMerchant from "./components/merchant/SignupMerchant";
 import SignupBuyer from "./components/buyer/SignupBuyer";
 import { Notfound } from "./components/Notfound";
+import HomePage from "./components/HomePage/HomePage.js";
+import Login from "./components/Login/Login";
+import DashboardPage from "./components/DashboardPage/DashboardPage";
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -30,10 +30,10 @@ function App() {
         <Alert alert={alert} />
         <div>
           <Routes>
-            <Route exact path="/" element={<HomePage showAlert={showAlert} />} />
-            <Route exact path="/signuphome" element={<SignupHome showAlert={showAlert} />} />
-            <Route exact path="/signupmerchant" element={<SignupMerchant showAlert={showAlert} />} />
+            <Route exact path="/" element={<HomePage />} />
             <Route exact path="/signupbuyer" element={<SignupBuyer showAlert={showAlert} />} />
+            <Route exact path="/login" element={<Login />} />
+            <Route exact path="/dashboard" element={<DashboardPage />} />
             <Route path="*" element={<Notfound />} />
           </Routes>
         </div>
@@ -42,7 +42,7 @@ function App() {
             <div className="row align-items-center justify-content-center">
               <div className="col-12 mb-lg-0 mb-4">
                 <div className="text-center text-sm">
-                  Made with ❤️ by
+                  Made with <span role="img" aria-label="">❤️</span> by
                   <b> Team Proxies</b>
                 </div>
               </div>
