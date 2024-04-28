@@ -9,6 +9,7 @@ import { Notfound } from "./components/Notfound";
 import HomePage from "./components/HomePage/HomePage.js";
 import Login from "./components/Login/Login";
 import DashboardPage from "./components/DashboardPage/DashboardPage";
+import Payment from "./components/Payment/Payment";
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -34,6 +35,7 @@ function App() {
             <Route exact path="/signupbuyer" element={<SignupBuyer showAlert={showAlert} />} />
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/dashboard" element={<DashboardPage />} />
+            <Route exact path="/payment" element={<Payment />} />
             <Route path="*" element={<Notfound />} />
           </Routes>
         </div>

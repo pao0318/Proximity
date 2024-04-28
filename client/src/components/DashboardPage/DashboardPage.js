@@ -1,10 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState} from "react";
 import "./DashboardPage.css";
+// import Payment from "../Payment/Payment";
+import { useNavigate} from "react-router-dom";
 
 const DashboardPage = () => {
 
+    const navigate = useNavigate();
     const [shops, setShops] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
+    // const [selectedItem, setSelectedItem] = useState(null);
+    // const [selectedShop, setSelectedShop] = useState(null);
     const userLocationString = localStorage.getItem("location");
   
     // Extracting latitude and longitude of user's location
@@ -330,18 +335,21 @@ const DashboardPage = () => {
     );
   });
 
+  const handleBuyNow = (item, shopName) => {
+    // Redirect to payment page
+    navigate("/payment", { state: { item, shopName } });
+  };
+
   return (
     <main id="main">
       <section id="shops" className="shops">
         <div className="container">
           <div className="heading-container">
-            <h2 className="heading">
-              Nearest shops to your location
-            </h2>
+            <h2 className="heading">Nearest shops to your location</h2>
             <div className="search-container">
               <input
                 type="text"
-                placeholder="Search for an item ..."
+                placeholder="Search for an item..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="search-input"
@@ -353,20 +361,31 @@ const DashboardPage = () => {
               <h3>{shop.name} <span>({shop.distance.toFixed(2)} km)</span></h3>
               <div className="items-list">
                 {shop.items
-                  .filter((item) => item.name.toLowerCase().includes(searchTerm.toLowerCase()))
+                  .filter((item) =>
+                    item.name.toLowerCase().includes(searchTerm.toLowerCase())
+                  )
                   .map((item) => (
                     <div key={item.id} className={`item-card shop${shop.id}`}>
                       <h4>{item.name}</h4>
                       <p><b>Category:</b> {item.category}</p>
                       <p><b>Price:</b> ${item.price}</p>
-                      <p><b>Tags:</b> {item.tags.join(', ')}</p>
+                      <p><b>Tags:</b> {item.tags.join(", ")}</p>
+                      <button
+                        className="buy-now-button"
+                        onClick={() => handleBuyNow(item, shop.name)}
+                      >
+                        Buy Now
+                      </button>
                     </div>
-                ))}
+                  ))}
               </div>
             </div>
           ))}
         </div>
       </section>
+      {/* {selectedItem && selectedShop && (
+        <Payment itemName={selectedItem} shopName={selectedShop} />
+      )} */}
     </main>
   );
   

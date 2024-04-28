@@ -646,6 +646,7 @@
    */
 
   /* Shop list styling */
+
   #main {
     text-align: left;
   }
@@ -693,54 +694,32 @@
   }
   
   .items-list {
-    overflow-x: auto; /* Make the items scrollable horizontally */
-    white-space: nowrap; /* Prevent item cards from wrapping to the next line */
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
   }
   
   .item-card {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-    margin-right: 10px; /* Margin between item cards */
-    display: inline-block; /* Display item cards inline */
-    width: 300px; /* Set the width of item cards */
-    height: 220px; /* Set the height of item cards */
+    flex: 0 0 auto;
+    width: 250px;
+    margin-right: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
   }
   
-  .buy-now-button {
-    background-color: rgb(17, 62, 125);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-    width: calc(100% - 20px); /* Full width with padding */
-    margin-top: 10px; /* Add margin from top */
-  }  
+  .shop1 .item-card { background-color: #add8e6; }
+  .shop2 .item-card { background-color: #ffb6c1; }
+  .shop3 .item-card { background-color: #ffd700; }
+  .shop4 .item-card { background-color: #90ee90; }
+  .shop5 .item-card { background-color: #c0c0c0; }
   
-  /* .item-card {
-    position: relative;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 20px; 
-    display: flex;
-    flex-direction: column;
-    height: 220px; 
-    width: 300px; 
-  } 
+  .item-card h4 {
+    margin-top: 0;
+  }
   
-  .buy-now-button {
-    background-color: rgb(17, 62, 125);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-    margin-top: auto;
-    width: 40%;
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-  } */
+  .item-card p {
+    margin: 5px 0;
+  }
   
