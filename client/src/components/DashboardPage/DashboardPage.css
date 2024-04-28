@@ -706,7 +706,13 @@
     width: 300px; /* Set the width of item cards */
     height: 220px; /* Set the height of item cards */
   }
-  
+
+  .item-card-content {
+    height: calc(100% - 50px); /* Adjust height of content area */
+    overflow-y: auto; /* Add vertical scroll if content overflows */
+    overflow-wrap: break-word;
+  }
+
   .buy-now-button {
     background-color: rgb(17, 62, 125);
     color: white;

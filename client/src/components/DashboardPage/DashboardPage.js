@@ -263,7 +263,7 @@ const DashboardPage = () => {
                     },
                     {
                       "id": "item26",
-                      "name": "Sapiens: A Brief History of Humankind",
+                      "name": "Sapiens: A Brief Humankind",
                       "category": "Non-fiction",
                       "price": 14.99,
                       "tags": ["History", "Anthropology"]
