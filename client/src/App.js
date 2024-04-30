@@ -10,6 +10,8 @@ import HomePage from "./components/HomePage/HomePage.js";
 import Login from "./components/Login/Login";
 import DashboardPage from "./components/DashboardPage/DashboardPage";
 import Payment from "./components/Payment/Payment";
+import SquareWebPaymentsQuickstart from "./components/squareIndex";
+import PaymentForm from "./components/MakePayments/PaymentForm";
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -36,7 +38,9 @@ function App() {
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/dashboard" element={<DashboardPage />} />
             <Route exact path="/payment" element={<Payment />} />
-            <Route path="*" element={<Notfound />} />
+            {/* <Route path="*" element={<Notfound />} /> */}
+            <Route path ="/square" element = {<SquareWebPaymentsQuickstart/>}/>
+            <Route path ="/payment-card" element = {<PaymentForm/>}/>
           </Routes>
         </div>
         <footer className="footer py-2 text-muted">

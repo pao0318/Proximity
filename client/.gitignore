@@ -21,3 +21,12 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# do not commit sensitive information to git
+src/.env.example
+src/.env.sandbox
+
+
+# dev tools
+.eslintcache
+.nyc_output
