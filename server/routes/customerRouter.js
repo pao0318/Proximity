@@ -7,6 +7,7 @@ let router = express.Router();
 router.post('/signupbuyer', async(req, res) => {
     let success=false;
   try {
+    console.log("In signup")
     const { name, email, password, phoneNumber, location } = req.body;
     const newBuyer = new Buyer({
         name,
@@ -23,6 +24,33 @@ router.post('/signupbuyer', async(req, res) => {
     success = false;
     return res.status(500).json({ success, error: 'Internal server error' });
 }
+});
+
+//GetShopLists
+// router.get('/getshoplist', async(req, res) => {
+//     let success=false;
+//   try {
+//     const { name, email, password, phoneNumber, location } = req.body;
+//     const newBuyer = new Buyer({
+//         name,
+//         email,
+//         password,
+//         phoneNumber,
+//         location
+//     });
+//     const savedBuyer = await newBuyer.save();
+//     success =true;
+//     return res.status(201).json({success, savedBuyer});
+// } catch (error) {
+//     console.error('Error saving buyer:', error);
+//     success = false;
+//     return res.status(500).json({ success, error: 'Internal server error' });
+// }
+// });
+
+//Route: to get shop list
+router.get("/getshops",async (req,res) => {
+
 });
 
 //Route2: login: authenticate

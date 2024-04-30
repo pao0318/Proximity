@@ -33,8 +33,11 @@ const SignupBuyer = () => {
     });
     const json = await response.json();
     console.log('formdata', formData)
+    console.log('location',json.savedBuyer.location)
     if (json.success) {
       localStorage.setItem("email", json.savedBuyer.email);
+      localStorage.setItem("location", json.savedBuyer.location);
+      console.log("location stored? ",localStorage.getItem("location"));
       navigate("/login");
     }
   };

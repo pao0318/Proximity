@@ -8,7 +8,7 @@ const HomePage = () => {
         <div className="container">
           <h1>Welcome to Proximity</h1>
           <h2>Say Hello to India's greatest shopping experience "Project Proxies"</h2>
-          <a href="/login" className="btn-get-started scrollto">
+          <a href="/signupbuyer" className="btn-get-started scrollto">
             Get Started
           </a>
         </div>
@@ -22,10 +22,7 @@ const HomePage = () => {
                 <div className="content">
                   <h3>Why Choose Exelligence?</h3>
                   <p>
-                    Get digital prescriptions, monitoring your progress with
-                    advanced AI features.
-                    Get personalized one-to-one attentions by health
-                    professionals till completely recovery .
+                    Get and shop near your home
                   </p>
                   <div className="text-center">
                     <a href="/login" className="more-btn">
@@ -52,22 +49,22 @@ const HomePage = () => {
                       data-bs-toggle="tab"
                       href="#tab-1"
                     >
-                      Orthopedics
+                      Bakery
                     </a>
                   </li>
                   <li className="nav-item">
                     <a className="nav-link" data-bs-toggle="tab" href="#tab-2">
-                      Neurology
+                      Stationary
                     </a>
                   </li>
                   <li className="nav-item">
                     <a className="nav-link" data-bs-toggle="tab" href="#tab-3">
-                      Ophtamology
+                      Foods
                     </a>
                   </li>
                   <li className="nav-item">
                     <a className="nav-link" data-bs-toggle="tab" href="#tab-4">
-                      Pediatrics
+                      Hardwares
                     </a>
                   </li>
                 </ul>
@@ -77,7 +74,7 @@ const HomePage = () => {
                   <div className="tab-pane active show" id="tab-1">
                     <div className="row gy-4">
                       <div className="col-lg-8 details order-2 order-lg-1">
-                        <h3>Cardiology</h3>
+                        <h3>Bakery</h3>
                         <p className="fst-italic">
                           Qui laudantium consequatur laborum sit qui ad sapiente
                           dila parde sonata raqer a videna mareta paulona marka
@@ -221,25 +218,6 @@ const HomePage = () => {
             </div>
 
             <div className="row">
-              <div className="col-lg-3">
-                <div
-                  className="member align-items-center"
-                  data-aos="zoom-in"
-                  data-aos-delay="100"
-                >
-                  <div className="pic">
-                    {/* <img
-                      src="/img/team/team-1.jpeg"
-                      className="img-fluid"
-                      alt=""
-                    /> */}
-                  </div>
-                  <div className="member-info">
-                    <h4>Karan Agrawal</h4>
-                  </div>
-                </div>
-              </div>
-
               <div className="col-lg-3 mt-4 mt-lg-0">
                 <div
                   className="member align-items-center"
@@ -258,26 +236,25 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-
               <div className="col-lg-3 mt-4 mt-lg-0">
                 <div
-                  className="member align-items-start"
+                  className="member align-items-center"
                   data-aos="zoom-in"
-                  data-aos-delay="100"
+                  data-aos-delay="200"
                 >
                   <div className="pic">
                     {/* <img
-                      src="/img/team/team-4.jpeg"
+                      src="/img/team/team-2.PNG"
                       className="img-fluid"
                       alt=""
                     /> */}
                   </div>
                   <div className="member-info">
-                    <h4>Umang Pandey</h4>
+                    <h4>Sai Shubham</h4>
                   </div>
                 </div>
-                
               </div>
+
             </div>
           </div>
         </section>

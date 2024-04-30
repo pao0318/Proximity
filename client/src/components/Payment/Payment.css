@@ -1,5 +1,5 @@
 
-body {
+/* body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
   }
@@ -139,9 +139,9 @@ body {
   }
   #topbar .social-links a:first-child {
     border-left: 0;
-  }
+  } */
   
-  /*--------------------------------------------------------------
+  /* /*--------------------------------------------------------------
   # Hero Section
   --------------------------------------------------------------*/
   #hero {
@@ -643,88 +643,83 @@ body {
       background: #1977cc;
     }
   }
+   */
+
+  /* Shop list styling */
+
+  #main {
+    text-align: left;
+  }
   
-  /*--------------------------------------------------------------
-  # Team
-  --------------------------------------------------------------*/
-  .team .member {
-    position: relative;
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-    padding: 30px;
+  #shops {
+    padding-top: 50px;
+  }
+  
+  .heading-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .heading {
+    margin: 0;
+  }
+  
+  .search-container {
+    flex: 1;
+    margin-left: 20px;
+    max-width: 50%;
+  }
+  
+  .search-input {
+    width: calc(100% - 20px);
+    padding: 10px;
     border-radius: 5px;
-    background: #fff;
-    transition: 0.5s;
-  }
-  .team .member .pic {
-    overflow: hidden;
-    width: 180px;
-    border-radius: 50%;
-  }
-  .team .member .pic img {
-    transition: ease-in-out 0.3s;
-  }
-  .team .member:hover {
-    transform: translateY(-10px);
-  }
-  .team .member .member-info {
-    padding-left: 30px;
-  }
-  .team .member h4 {
-    font-weight: 700;
-    margin-bottom: 5px;
-    font-size: 20px;
-    color: #37517e;
-  }
-  .team .member span {
-    display: block;
-    font-size: 15px;
-    padding-bottom: 10px;
-    position: relative;
-    font-weight: 500;
-  }
-  .team .member span::after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 50px;
-    height: 1px;
-    background: #cbd6e9;
-    bottom: 0;
-    left: 0;
-  }
-  .team .member p {
-    margin: 10px 0 0 0;
-    font-size: 14px;
-  }
-  .team .member .social {
-    margin-top: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  .team .member .social a {
-    transition: ease-in-out 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50px;
-    width: 32px;
-    height: 32px;
-    background: #eff2f8;
-  }
-  .team .member .social a i {
-    color: #37517e;
-    font-size: 16px;
-    margin: 0 2px;
-  }
-  .team .member .social a:hover {
-    background: #47b2e4;
-  }
-  .team .member .social a:hover i {
-    color: #fff;
-  }
-  .team .member .social a + a {
-    margin-left: 8px;
+    border: 1px solid #ccc;
   }
   
+  .shop-section {
+    margin-bottom: 30px;
+  }
+  
+  .shop-section h3 {
+    margin-bottom: 10px;
+  }
+  
+  .shop-section h3 span {
+    font-size: 14px;
+    color: #666;
+    margin-left: 10px;
+  }
+  
+  .items-list {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+  }
+  
+  .item-card {
+    flex: 0 0 auto;
+    width: 250px;
+    margin-right: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .shop1 .item-card { background-color: #add8e6; }
+  .shop2 .item-card { background-color: #ffb6c1; }
+  .shop3 .item-card { background-color: #ffd700; }
+  .shop4 .item-card { background-color: #90ee90; }
+  .shop5 .item-card { background-color: #c0c0c0; }
+  
+  .item-card h4 {
+    margin-top: 0;
+  }
+  
+  .item-card p {
+    margin: 5px 0;
+  }
   

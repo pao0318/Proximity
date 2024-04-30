@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import './Login.css';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -14,10 +16,12 @@ function Login() {
   };
 
   const handleSubmit = (e) => {
+   
     e.preventDefault();
     console.log('Email:', email);
     console.log('Password:', password);
     // Here you can perform further actions like sending login data to the server
+    navigate("/dashboard");
   };
 
   return (
